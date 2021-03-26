@@ -13,6 +13,18 @@ const getSnippets = async () => {
   return data;
 };
 
+const getSnippetsByLanguage = async (language) => {
+  const { data } = faunaClient.query(
+    q.Map(
+      q.Paginate(q.Match(q.Index("snippets_by_language"), language)),
+      q.Lambda("ref", q.Get(q.Var("ref")))
+    )
+  );
+
+  return data;
+};
+
 module.exports = {
   getSnippets,
+  getSnippetsByLanguage,
 };
