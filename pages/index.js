@@ -1,20 +1,39 @@
 import Head from "next/head";
+import useSWR from "swr";
+import Link from "next/link";
+
+import Snippet from "../Components/Snippet";
 
 export default function Home() {
+  const { data: snippets, mutate } = useSWR("/api/snippets");
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-0 py-2 m-0 bg-blue-400">
+    <div className="">
       <Head>
         <title>Code-Snippers</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="py flex flex-col items-center justify-start flex-1 px-20 m-0 text-center bg-white">
-        <h1 className="text-6xl font-bold">
-          Welcome to{" "}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Code-Snippers
-          </a>
-        </h1>
+      <main>
+        <div className="my-12">
+          <h1 className="text-blue-50 text-2xl">Code-Snippers</h1>
+          <p className="text-blue-100">
+            Create, save and share your code snippets from everyday coding
+            adventures.
+          </p>
+          <Link href="/new">
+            <a className="hover:bg-blue-900 focus:outline-none focus:shadow-outline inline-block px-4 py-2 mt-3 font-bold text-white bg-blue-700 rounded">
+              Create a Snippet!
+            </a>
+          </Link>
+        </div>
+        {snippets &&
+          snippets.map((snippet) => (
+            <Snippet
+              key={snippet.id}
+              snippet={snippet}
+              snippetDeleted={mutate}
+            />
+          ))}
       </main>
     </div>
   );
