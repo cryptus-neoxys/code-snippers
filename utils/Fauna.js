@@ -44,9 +44,7 @@ const updateSnippet = async (id, code, language, description, name) => {
 };
 
 const deleteSnippet = async (id) => {
-  return await faunaClient.query(
-    q.Delete(q.Ref(q.Collection("snippetes"), id))
-  );
+  return await faunaClient.query(q.Delete(q.Ref(q.Collection("snippets"), id)));
 };
 
 module.exports = {
