@@ -8,6 +8,7 @@ Save your code snippets and share them.
 
 1. Auth
 2. Convert code to your favourite IDE snippets
+3. Dark Mode 🌚
 
 ## Tech Stack to be used
 
