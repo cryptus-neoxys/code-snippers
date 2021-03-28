@@ -1,5 +1,5 @@
 import Head from "next/head";
-import SnippetForm from "../components/SnippetForm";
+import SnippetForm from "../Components/SnippetForm";
 
 export default function Home() {
   return (
