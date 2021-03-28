@@ -1,7 +1,7 @@
 import Head from "next/head";
 
+import { getSnippetById } from "../../utils/Fauna";
 import SnippetForm from "../../components/SnippetForm";
-import { getSnippetsById } from "../../utils/Fauna";
 
 export default function Home({ snippet }) {
   return (
@@ -22,14 +22,14 @@ export default function Home({ snippet }) {
 export async function getServerSideProps(context) {
   try {
     const id = context.params.id;
-    const snippet = await getSnippetsById;
+    const snippet = await getSnippetById(id);
     return {
       props: { snippet },
     };
   } catch (error) {
-    console.error(error);
+    console.trace(error);
     context.res.statusCode = 302;
-    context.res.setHeader("Locations", "/");
+    context.res.setHeader("Location", `/`);
     return { props: {} };
   }
 }
