@@ -21,9 +21,11 @@ export default function Snippet({ snippet, snippetDeleted }) {
       <p className="mb-4 text-gray-900">{snippet.data.description}</p>
       <Code code={snippet.data.code} />
       <Link href={`/edit/${snippet.id}`}>
-        <a className="mr-2 text-gray-800">Edit</a>
+        <a className="text-bold mx-2 font-bold text-blue-600 rounded">Edit</a>
       </Link>
-      <button onClick={deleteSnippet} className="mr-2 text-gray-500 bg-red-600">
+      <button
+        onClick={deleteSnippet}
+        className="text-bold mx-2 font-bold text-red-600 rounded">
         Delete
       </button>
     </div>
