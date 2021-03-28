@@ -1,3 +1,4 @@
+// import "../styles/app.css";
 import Head from "next/head";
 import useSWR from "swr";
 import Link from "next/link";
