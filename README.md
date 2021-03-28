@@ -12,7 +12,7 @@ Save your code snippets and share them.
 
 ## Tech Stack to be used
 
-1. [ ] Serverless Architecture
+1. [x] Serverless Architecture
    1. [x] Frontend Frameworks
       1. [x] NEXTjs
       2. [x] TailwindCSS
