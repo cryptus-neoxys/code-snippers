@@ -42,10 +42,37 @@ export default function SnippetForm({ snippet }) {
       name: snippet ? snippet.data.name : "",
     },
   });
-  const createSnippet = async (data) => {};
-  const updateSnippet = async (data) => {};
+  const createSnippet = async (data) => {
+    const { code, language, description, name } = data;
+    try {
+      // console.log(data);
+      await fetch("/api/createSnippet", {
+        method: "POST",
+        body: JSON.stringify({ code, language, description, name }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      router.push("/");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const updateSnippet = async (data) => {
+    const { code, language, description, name, id } = data;
+    try {
+      console.log(data);
+      // router.push('/')
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
-    <form onSubmit={handleSubmit(snippet ? updateSnippet : createSnippet)}>
+    <form
+      onSubmit={handleSubmit(
+        handleSubmit(snippet ? updateSnippet : createSnippet)
+      )}>
       <div className="mb-4">
         <label
           className="block mb-1 text-sm font-bold text-blue-200"
@@ -60,7 +87,7 @@ export default function SnippetForm({ snippet }) {
           ref={register({ required: true })}
         />
         {errors.name && (
-          <p className="font-bold text-red-900">Name is required</p>
+          <p className="text-lg font-bold text-black">Name is required</p>
         )}
       </div>
       <div className="mb-4">
@@ -76,11 +103,13 @@ export default function SnippetForm({ snippet }) {
           className=" w-full px-4 py-2 text-gray-700 bg-white border rounded outline-none"
           ref={register({ required: true })}>
           {languages.map((language) => (
-            <option className="py-1">{language}</option>
+            <option key={language} className="py-1">
+              {language}
+            </option>
           ))}
         </select>
         {errors.language && (
-          <p className="font-bold text-red-900">Language is required</p>
+          <p className="text-lg font-bold text-black">Language is required</p>
         )}
       </div>
       <div className="mb-4">
@@ -97,7 +126,9 @@ export default function SnippetForm({ snippet }) {
           placeholder="What does this snippet do?"
           ref={register({ required: true })}></textarea>
         {errors.description && (
-          <p className="font-bold text-red-900">Description is required</p>
+          <p className="text-lg font-bold text-black">
+            Description is required
+          </p>
         )}
       </div>{" "}
       <div className="mb-4">
@@ -114,7 +145,7 @@ export default function SnippetForm({ snippet }) {
           placeholder="ex. console.log('helloworld')"
           ref={register({ required: true })}></textarea>
         {errors.code && (
-          <p className="font-bold text-red-900">Code is required.</p>
+          <p className="text-lg font-bold text-black">Code is required.</p>
         )}
       </div>
       <button
