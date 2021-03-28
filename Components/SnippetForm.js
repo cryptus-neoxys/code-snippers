@@ -60,10 +60,17 @@ export default function SnippetForm({ snippet }) {
   };
 
   const updateSnippet = async (data) => {
-    const { code, language, description, name, id } = data;
+    const { code, language, description, name } = data;
+    const id = snippet.id;
     try {
-      console.log(data);
-      // router.push('/')
+      await fetch("/api/updateSnippet", {
+        method: "PUT",
+        body: JSON.stringify({ code, language, description, name, id }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      router.push("/");
     } catch (error) {
       console.log(error);
     }
