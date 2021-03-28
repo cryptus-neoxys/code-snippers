@@ -7,8 +7,18 @@ export default function Snippet({ snippet, snippetDeleted }) {
   const router = useRouter();
 
   const deleteSnippet = async () => {
-    // !TODO
-    // Use api to delete snippet
+    try {
+      await fetch("/api/deleteSnippet", {
+        method: "DELETE",
+        body: JSON.stringify({ id: snippet.id }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      snippetDeleted();
+    } catch (error) {
+      console.error(error);
+    }
   };
   return (
     <div className="p-4 my-2 bg-gray-100 rounded-md shadow-lg">
