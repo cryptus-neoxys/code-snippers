@@ -17,7 +17,7 @@ Save your code snippets and share them.
       1. [x] NEXTjs
       2. [x] TailwindCSS
    2. [x] Serverless Functions
-      1. [x] NEXT's inbuilt api with Netlify Serverless
+      1. [x] NEXT's inbuilt api feature with Vercel
    3. [x] Database & API
       1. [x] FaunaDB
    4. [ ] Authentication Provider
