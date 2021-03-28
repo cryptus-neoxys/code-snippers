@@ -16,8 +16,8 @@ export default function Code({ code }) {
     <div>
       <button
         onClick={() => setShowCode(!showCode)}
-        className="hover:bg-blue-900 focus:outline-none focus:shadow-outline px-3 py-1 mb-2 text-xs font-bold text-white bg-blue-800">
-        {showCode ? "Hide Code" : "Show Code"}
+        className="hover:bg-blue-900 focus:outline-none focus:shadow-outline px-3 py-1 mb-2 text-sm font-bold text-white bg-blue-800 rounded-md">
+        {showCode ? "Hide the Code 🙈" : "Show the Code 👇"}
       </button>
       {showCode && (
         <div className="relative">
