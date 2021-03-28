@@ -3,7 +3,7 @@ import Head from "next/head";
 import useSWR from "swr";
 import Link from "next/link";
 
-import Snippet from "./Components/Snippet";
+import Snippet from "../Components/Snippet";
 
 export default function Home() {
   const { data: snippets, mutate } = useSWR("/api/snippets");
