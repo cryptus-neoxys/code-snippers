@@ -4,11 +4,10 @@
 
 Save your code snippets and share them.
 
-### Features Coming Soon
+### Features to be added
 
-1. Web App
-2. Auth
-3. Convert code to your favourite IDE snippets
+1. Auth
+2. Convert code to your favourite IDE snippets
 
 ## Tech Stack to be used
 
@@ -16,9 +15,9 @@ Save your code snippets and share them.
    1. [x] Frontend Frameworks
       1. [x] NEXTjs
       2. [x] TailwindCSS
-   2. [ ] Serverless Functions
-      1. [ ] NEXT's inbuilt api with Netlify Serverless
-   3. [ ] Database & API
-      1. [ ] FaunaDB
+   2. [x] Serverless Functions
+      1. [x] NEXT's inbuilt api with Netlify Serverless
+   3. [x] Database & API
+      1. [x] FaunaDB
    4. [ ] Authentication Provider
       1. [ ] Auth0
