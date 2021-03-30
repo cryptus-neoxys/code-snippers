@@ -32,11 +32,6 @@ export default function Home() {
               alt="Checkout GitHub"
             />
           </a> */}
-          <Link href="/new">
-            <a className="hover:bg-blue-900 focus:outline-none focus:shadow-outline inline-block px-4 py-2 mt-3 font-bold text-white bg-blue-700 rounded">
-              Create a Snippet!
-            </a>
-          </Link>
         </div>
         {snippets &&
           snippets.map((snippet) => (
