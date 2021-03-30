@@ -75,6 +75,21 @@ export default function SnippetForm({ snippet }) {
       console.log(error);
     }
   };
+
+  const deleteSnippet = async () => {
+    try {
+      await fetch("/api/deleteSnippet", {
+        method: "DELETE",
+        body: JSON.stringify({ id: snippet.id }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      router.push("/");
+    } catch (error) {
+      console.error(error);
+    }
+  };
   return (
     <form
       onSubmit={handleSubmit(
@@ -161,10 +176,16 @@ export default function SnippetForm({ snippet }) {
         Save
       </button>
       <Link href="/">
-        <a className="hover:bg-red-900 focus:outline-none focus:shadow-outline inline-block px-4 py-2 mt-3 mr-2 font-bold text-white bg-red-700">
+        <a className="hover:bg-yellow-900 focus:outline-none focus:shadow-outline inline-block px-4 py-2 mt-3 mr-2 font-bold text-white bg-yellow-600">
           Cancel
         </a>
       </Link>
+      <button
+        className="hover:bg-red-700 focus:outline-none focus:shadow-outline px-4 py-2 mt-3 mr-2 font-bold text-white bg-red-600 rounded"
+        type="button"
+        onClick={deleteSnippet}>
+        Delete
+      </button>
     </form>
   );
 }
