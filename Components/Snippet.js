@@ -2,9 +2,10 @@ import React from "react";
 import Code from "./Code";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useUser } from "@auth0/nextjs-auth0";
 
 export default function Snippet({ snippet, snippetDeleted }) {
-  const router = useRouter();
+  const { user, isLoading, error } = useUser();
 
   const deleteSnippet = async () => {
     try {
@@ -30,12 +31,18 @@ export default function Snippet({ snippet, snippetDeleted }) {
       </div>
       <p className="mb-4 text-gray-900">{snippet.data.description}</p>
       <Code code={snippet.data.code} />
-      <Link href={`/edit/${snippet.id}`}>
-        <a className="mx-2 font-bold text-green-600">Edit</a>
-      </Link>
-      <button onClick={deleteSnippet} className="mx-2 font-bold text-red-600">
-        Delete
-      </button>
+      {user && !isLoading && user.sub == snippet.data.userId && (
+        <>
+          <Link href={`/edit/${snippet.id}`}>
+            <a className="mx-2 font-bold text-green-600">Edit</a>
+          </Link>
+          <button
+            onClick={deleteSnippet}
+            className="mx-2 font-bold text-red-600">
+            Delete
+          </button>
+        </>
+      )}
     </div>
   );
 }
