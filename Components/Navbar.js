@@ -17,13 +17,13 @@ export default function Navbar() {
         <div className="flex flex-wrap items-center justify-center mx-auto mb-6">
           {!user ? (
             <Link href="/api/auth/login">
-              <a className="hover:underline text-xl font-bold text-blue-100 transition-all">
+              <a className="hover:underline hover:text-green-500 text-lg font-bold text-center text-green-200 transition-all duration-200 ease-in-out">
                 Login
               </a>
             </Link>
           ) : (
             <>
-              <Link href="/mySinppets">
+              <Link href="/mySnippets">
                 <a className="hover:underline hover:text-green-500 text-lg font-bold text-center text-green-200 transition-all duration-200 ease-in-out">
                   My Snippets
                 </a>

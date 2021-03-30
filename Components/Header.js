@@ -1,4 +1,5 @@
 import { useUser } from "@auth0/nextjs-auth0";
+import Link from "next/link";
 
 export default function Header({ title, subtitle }) {
   const { user, isLoading, error } = useUser();
