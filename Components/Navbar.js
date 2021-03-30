@@ -24,12 +24,12 @@ export default function Navbar() {
           ) : (
             <>
               <Link href="/mySinppets">
-                <a className="hover:underline hover:text-green-400 text-lg font-bold text-center text-blue-100 transition-all duration-200 ease-in-out">
+                <a className="hover:underline hover:text-green-500 text-lg font-bold text-center text-green-200 transition-all duration-200 ease-in-out">
                   My Snippets
                 </a>
               </Link>
               <Link href="/api/auth/logout">
-                <a className="hover:underline hover:text-red-400 text-lg font-bold text-center text-blue-100 transition-all duration-200 ease-in-out">
+                <a className="hover:underline hover:text-red-500 text-lg font-bold text-center text-red-200 transition-all duration-200 ease-in-out">
                   Logout
                 </a>
               </Link>
