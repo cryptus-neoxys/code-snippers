@@ -97,7 +97,7 @@ export default function SnippetForm({ snippet }) {
       )}>
       <div className="mb-4">
         <label
-          className="block mb-1 text-sm font-bold text-blue-200"
+          className="block mb-1 text-sm font-bold text-blue-700"
           htmlFor="name">
           Name
         </label>
@@ -105,7 +105,7 @@ export default function SnippetForm({ snippet }) {
           type="text"
           id="name"
           name="name"
-          className=" w-full px-4 py-2 text-gray-700 bg-white border rounded outline-none"
+          className=" w-full px-4 py-2 text-gray-700 border rounded outline-none"
           ref={register({ required: true })}
         />
         {errors.name && (
@@ -114,7 +114,7 @@ export default function SnippetForm({ snippet }) {
       </div>
       <div className="mb-4">
         <label
-          className="block mb-1 text-sm font-bold text-blue-200"
+          className="block mb-1 text-sm font-bold text-blue-700"
           htmlFor="language">
           Language
         </label>
@@ -122,7 +122,7 @@ export default function SnippetForm({ snippet }) {
           type="text"
           id="language"
           name="language"
-          className=" w-full px-4 py-2 text-gray-700 bg-white border rounded outline-none"
+          className=" bg-gray-50 w-full px-4 py-2 text-gray-700 border rounded outline-none"
           ref={register({ required: true })}>
           {languages.map((language) => (
             <option key={language} className="py-1">
@@ -136,7 +136,7 @@ export default function SnippetForm({ snippet }) {
       </div>
       <div className="mb-4">
         <label
-          className="block mb-1 text-sm font-bold text-blue-200"
+          className="block mb-1 text-sm font-bold text-blue-700"
           htmlFor="description">
           Description
         </label>
@@ -155,7 +155,7 @@ export default function SnippetForm({ snippet }) {
       </div>{" "}
       <div className="mb-4">
         <label
-          className="block mb-1 text-sm font-bold text-blue-100"
+          className="block mb-1 text-sm font-bold text-blue-700"
           htmlFor="code">
           Code
         </label>
@@ -171,17 +171,17 @@ export default function SnippetForm({ snippet }) {
         )}
       </div>
       <button
-        className="hover:bg-green-700 focus:outline-none focus:shadow-outline px-4 py-2 mt-3 mr-2 font-bold text-white bg-green-600 rounded"
+        className="hover:bg-green-700 focus:outline-none focus:shadow-outline text-gray-50 px-4 py-2 mt-3 mr-2 font-bold bg-green-500 rounded"
         type="submit">
         Save
       </button>
       <Link href="/">
-        <a className="hover:bg-yellow-900 focus:outline-none focus:shadow-outline inline-block px-4 py-2 mt-3 mr-2 font-bold text-white bg-yellow-600">
+        <a className="hover:bg-yellow-700 focus:outline-none focus:shadow-outline text-gray-50 inline-block px-4 py-2 mt-3 mr-2 font-bold bg-yellow-500">
           Cancel
         </a>
       </Link>
       <button
-        className="hover:bg-red-700 focus:outline-none focus:shadow-outline px-4 py-2 mt-3 mr-2 font-bold text-white bg-red-600 rounded"
+        className="hover:bg-red-700 focus:outline-none focus:shadow-outline text-gray-50 px-4 py-2 mt-3 mr-2 font-bold bg-red-500 rounded"
         type="button"
         onClick={deleteSnippet}>
         Delete

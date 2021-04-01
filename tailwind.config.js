@@ -1,11 +1,19 @@
 module.exports = {
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./Components/**/*.{js,ts,jsx,tsx}"],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: "class", // or 'media' or 'class'
   theme: {
-    extend: {},
+    nightwind: {
+      colorClasses: [
+        "gradient",
+        "ring",
+        "ring-offset",
+        "divide",
+        "placeholder",
+      ],
+    },
   },
   variants: {
-    extend: {},
+    nightwind: ["focus"], // Add any Tailwind variant
   },
-  plugins: [],
+  plugins: [require("nightwind")],
 };

@@ -26,7 +26,7 @@ export default function Code({ code }) {
           </pre>
           <button
             className={`${
-              copyText === "Copy" ? "text-gray-600" : "text-green-600"
+              copyText === "Copy" ? "text-gray-700" : "text-green-600"
             } font-bold py-1 px-3 rounded focus:outline-none focus:shadow-outline mb-2 absolute top-2 right-2 transform -translate-x-1 -translate-y-1`}
             type="submit"
             onClick={copyCode}>
