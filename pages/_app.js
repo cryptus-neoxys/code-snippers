@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
         storageKey="nightwind-mode"
         defaultTheme="dark" // default "light"
       >
-        <div className="w-full min-h-screen p-10 bg-blue-100">
+        <div className="bg-blue-50 w-full min-h-screen p-10">
           <div className="max-w-2xl mx-auto">
             <Component {...pageProps} />
           </div>
