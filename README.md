@@ -4,12 +4,6 @@
 
 Save your code snippets and share them.
 
-### Features to be added
-
-- [x] Auth
-- [x] Dark Mode 🌚
-- [ ] Convert code to your favourite IDE snippets
-
 ## Tech Stack to be used
 
 1. [x] Serverless Architecture
@@ -22,3 +16,9 @@ Save your code snippets and share them.
       1. [x] FaunaDB
    4. [x] Authentication Provider
       1. [x] Auth0
+
+## Features to be added
+
+- [x] Auth
+- [x] Dark Mode 🌚
+- [ ] Convert code to your favourite IDE snippets
