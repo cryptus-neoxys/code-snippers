@@ -2,9 +2,9 @@
 
 ## About this project
 
-Save your code snippets and share them.
+**\*Save**, **share** and **create** code snippets from your daily coding adventures.\*
 
-## Tech Stack to be used
+## 👨‍💻 Tech Stack used
 
 1. [x] Serverless Architecture
    1. [x] Frontend Frameworks
@@ -17,13 +17,17 @@ Save your code snippets and share them.
    4. [x] Authentication Provider
       1. [x] Auth0
 
-## Features to be added
+## 🤩 Features to be added
 
 - [x] Auth
 - [x] Dark Mode 🌚
 - [ ] Convert code to your favourite IDE snippets
 
-## Running Locally
+## ⭐ Contributions
+
+Refer to [contributing.md](../main/contributing.md)
+
+## ▶️ Running Locally
 
 1. Install the app
    - Run `yarn` or `npm i -g yarn && yarn` (if you don't have yarn installed)
@@ -50,3 +54,7 @@ Save your code snippets and share them.
        - Set a long random string as AUTH0_SECRET.
 5. Start the local dev build
    - Run `yarn dev`
+
+## 🔔 Credits
+
+This project is built by learning from [James Q Quick's](https://www.youtube.com/watch?v=1GpbdX8aJCU&t=19s) Youtube Channel.
