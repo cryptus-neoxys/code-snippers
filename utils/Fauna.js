@@ -5,7 +5,7 @@ const q = fauna.query;
 const getSnippets = async () => {
   const { data } = await faunaClient.query(
     q.Map(
-      q.Paginate(q.Documents(q.Collection("snippets"))),
+      q.Paginate(q.Reverse(q.Documents(q.Collection("snippets")))),
       q.Lambda("ref", q.Get(q.Var("ref")))
     )
   );
