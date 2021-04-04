@@ -21,6 +21,7 @@
 
 - [x] Auth
 - [x] Dark Mode 🌚
+- [x] Code Highlighting
 - [ ] Convert code to your favourite IDE snippets
 
 ## ⭐ Contributions
