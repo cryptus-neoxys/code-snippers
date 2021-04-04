@@ -16,7 +16,7 @@ export default function Snippet({ snippet, snippetDeleted }) {
         </span>
       </div>
       <p className="mb-4 text-gray-900">{snippet.data.description}</p>
-      <Code code={snippet.data.code} />
+      <Code code={snippet.data.code} language={snippet.data.language} />
       {user && !isLoading && user.sub == snippet.data.userId && (
         <Link href={`/edit/${snippet.id}`}>
           <a className="mx-2 font-bold text-green-600">Edit</a>

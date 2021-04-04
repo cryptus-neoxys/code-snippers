@@ -14,6 +14,7 @@
     "next": "latest",
     "next-themes": "^0.0.14",
     "nightwind": "^1.1.11",
+    "prism-react-renderer": "^1.2.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-hook-form": "^6.15.5",
