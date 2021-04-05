@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getSnippetById } from "../../utils/Fauna";
+import { getSnippetById } from "../../../utils/Fauna";
 
 export default function CreateSnippet({ snippet }) {
   const [code, setCode] = useState("");
