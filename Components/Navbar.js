@@ -19,10 +19,11 @@ export default function Navbar() {
     <header>
       <div className="flex justify-between">
         <div>
-          <h1
-            className="text-2xl font-bold text-blue-900 cursor-pointer"
-            onClick={toggle}>
-            Code Snippers {theme === "dark" ? "🌚" : "🌞"}
+          <h1 className="text-2xl font-bold text-blue-900 cursor-pointer">
+            Code Snippers
+            <span className="cursor-pointer" onClick={toggle}>
+              {theme === "dark" ? "🌚" : "🌞"}
+            </span>
           </h1>
           <p className="text-blue-700">
             Create, save and share your code snippets from everyday coding
@@ -53,7 +54,7 @@ export default function Navbar() {
         </div>
       </div>
       {user && !isLoading ? (
-        <Link href="/new">
+        <Link href="/snippet/new">
           <a className="hover:bg-blue-900 focus:outline-none focus:shadow-outline inline-block px-4 py-2 mt-3 font-bold text-white bg-blue-700 rounded">
             Create a Snippet!
           </a>

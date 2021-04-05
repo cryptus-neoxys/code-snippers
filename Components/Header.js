@@ -16,13 +16,15 @@ export default function Header({ title, subtitle }) {
   };
   return (
     <header className="my-12">
-      <h1 className="text-2xl text-blue-900 cursor-pointer" onClick={toggle}>
+      <h1 className="text-2xl text-blue-900 cursor-pointer">
         {title}
-        {theme === "dark" ? "🌚" : "🌞"}
+        <span className="cursor-pointer" onClick={toggle}>
+          {theme === "dark" ? "🌚" : "🌞"}
+        </span>
       </h1>
       {subtitle && <p className="text-blue-700">{subtitle}</p>}
       {user && !isLoading ? (
-        <Link href="/new">
+        <Link href="/snippet/new">
           <a className="hover:bg-blue-900 focus:outline-none focus:shadow-outline inline-block px-4 py-2 mt-3 font-bold text-white bg-blue-700 rounded">
             Create a Snippet!
           </a>
