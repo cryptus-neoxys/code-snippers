@@ -20,11 +20,17 @@ export default function Snippet({ snippet }) {
       </div>
       <p className="mb-4 text-gray-900">{snippet.data.description}</p>
       <Code code={snippet.data.code} language={snippet.data.language} />
-      {user && !isLoading && user.sub == snippet.data.userId && (
-        <Link href={`/snippet/edit/${snippet.id}`}>
-          <a className="mx-2 font-bold text-green-600">Edit</a>
-        </Link>
-      )}
+      <div className="flex justify-between">
+        {user && !isLoading && user.sub == snippet.data.userId && (
+          <Link href={`/snippet/edit/${snippet.id}`}>
+            <a className="mx-2 font-bold text-green-600">Edit</a>
+          </Link>
+        )}
+        {/* <Link href={`user/${userId}`}></Link> */}
+        <p className="mx-2 italic font-bold text-red-500">
+          - {snippet.data?.userName}
+        </p>
+      </div>
     </div>
   );
 }
