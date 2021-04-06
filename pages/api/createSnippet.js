@@ -4,6 +4,7 @@ import { withApiAuthRequired, getSession } from "@auth0/nextjs-auth0";
 export default withApiAuthRequired(async function handler(req, res) {
   const session = getSession(req, res);
   const userId = session.user.sub;
+  const userName = session.user.given_name;
 
   const { code, language, description, name } = req.body;
   if (req.method !== "POST") {
@@ -16,7 +17,8 @@ export default withApiAuthRequired(async function handler(req, res) {
       language,
       description,
       name,
-      userId
+      userId,
+      userName
     );
     return res.status(200).json(createdSnippet);
   } catch (err) {
