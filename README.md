@@ -1,5 +1,7 @@
 # Code-Snippers
 
+[![wakatime](https://wakatime.com/badge/github/cryptus-neoxys/code-snippers.svg)](https://wakatime.com/badge/github/cryptus-neoxys/code-snippers)
+
 ## About this project
 
 **\*Save**, **share** and **create** code snippets from your daily coding adventures.\*
