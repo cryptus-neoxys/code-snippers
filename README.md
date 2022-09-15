@@ -60,4 +60,4 @@ Refer to [contributing.md](../main/contributing.md)
 
 ## 🔔 Credits
 
-This project is built by learning from [James Q Quick's](https://www.youtube.com/watch?v=1GpbdX8aJCU&t=19s) Youtube Channel.
+This project is an improvement over the code-along from [James Q Quick's](https://www.youtube.com/watch?v=1GpbdX8aJCU&t=19s) video.
